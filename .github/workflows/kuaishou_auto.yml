@@ -6,7 +6,7 @@ name: 快手视频浏览
 on:
   push:
         branches:
-            - master
+            - main
   workflow_dispatch:
   schedule:
      - cron: '*/30 0,2,4,6,8,10,12 * * *'
@@ -22,7 +22,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone git@github.com:Enjoyee/Auto.git ~/Scripts
+          git clone https://github.com/Enjoyee/Auto.git ~/Scripts
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
