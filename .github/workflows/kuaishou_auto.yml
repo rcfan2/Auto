@@ -35,6 +35,6 @@ jobs:
         if: env.KUAISHOUMV
         run: |
           cd ~/Scripts
-          node kuai_auto.js
+          node task/kuai_auto.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
