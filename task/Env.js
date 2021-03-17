@@ -35,7 +35,7 @@ function Env(name, opts) {
       this.logSeparator = '\n'
       this.startTime = new Date().getTime();
       Object.assign(this, opts);
-      this.log('', `🔔${this.name}, 开始!`)
+      this.log('', `🔔 ${this.name}, 开始执行 🤖 !`)
     }
     isNode() {
       return 'undefined' !== typeof module && !!module.exports
@@ -433,7 +433,7 @@ function Env(name, opts) {
         }
       }
       if (!this.isMuteLog) {
-        let logs = ['', '==============📣系统通知📣==============']
+        let logs = ['', '==============📣 系统通知 📣==============']
         logs.push(title)
         subt ? logs.push(subt) : '';
         desc ? logs.push(desc) : '';
@@ -461,7 +461,7 @@ function Env(name, opts) {
     done(val = {}) {
       const endTime = new Date().getTime();
       const costTime = (endTime - this.startTime) / 1000;
-      this.log('', `🔔${this.name}, 结束! 🕛 ${costTime} 秒`);
+      this.log('', `🔔 ${this.name}, 结束! 🕛 ${costTime} 秒`);
       this.log();
       if (this.isSurge() || this.isQuanX() || this.isLoon()) {
         $done(val)
