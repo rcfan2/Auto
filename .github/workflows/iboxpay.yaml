@@ -57,7 +57,6 @@ jobs:
         if: env.XP_refreshTOKEN
         run: |
           cd ~/Auto
-          git checkout Enjoyee
           npm install
       - name: '运行 【笑谱】'
         if: env.Auto
